@@ -1,0 +1,66 @@
+#div_form{
+	position: absolute;
+	height: 220px;
+	width: 440px;
+}
+#lbl_name{
+	position: absolute;
+	top:32px;
+	left:10px;
+}
+#txt_name{
+	position: absolute;
+	top:30px;
+	left: 155px;
+}
+#lbl_e_mail{
+	position:absolute;
+	top:62px;
+	left:10px;
+}
+#txt_e_mail{
+	position: absolute;
+	top:60px;
+	left: 155px;
+}
+#lbl_mobile{
+	position: absolute;
+	top:92px;
+	left:10px;
+}
+#txt_mobile{
+	position: absolute;
+	top:90px;
+	left: 155px;
+}
+#lbl_password{
+	position: absolute;
+	top:122px;
+	left:10px;
+}
+#txt_password{
+	position: absolute;
+	top:120px;
+	left: 155px;
+}
+#lbl_retype_password{
+	position: absolute;
+	top:152px;
+	left:10px;
+}
+#txt_retype_password{
+	position: absolute;
+	top:150px;
+	left: 155px;
+}
+#btn_submit{
+	position: absolute;
+	top:180px;
+	left:100px;
+}
+#lbl_check_avail{
+	position: absolute;
+	top:35px;
+	left:305px;
+	font-size: 12px;
+}
