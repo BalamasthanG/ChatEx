@@ -1,34 +1,46 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/ChatEx/dbconfig/db_connection.php';
 class DB_Functions {
 
     private $db;
-
+    private $conn;
    
     function __construct() {
-        include_once $_SERVER['DOCUMENT_ROOT'].'/ChatEx/dbconfig/db_connection.php';
         // connecting to database
         $this->db = new DB_Connect();
-        $this->db->connect();
+        $this->conn = $this->db->connect();
     }
 
     
     function __destruct() {
-        include_once $_SERVER['DOCUMENT_ROOT'].'/ChatEx/dbconfig/db_connection.php';
         // disconnecting to database
         $this->db = new DB_Connect();
         $this->db->close();
     }
 
+    //used to register the user
     function registerUser($user_object){
-      include_once $_SERVER['DOCUMENT_ROOT'].'/ChatEx/dbconfig/db_connection.php';
-      $sqli="INSERT INTO register_user(Name,Email,Password,Mobile) 
-              VALUES('$user_object->name','$user_object->email',password('$user_object->password'),'$user_object->mobile')";
-      $result = mysql_query($sqli);
+      
+      $sqli="INSERT INTO register_user(Name,Mobile,E_mail,Password) 
+              VALUES('$user_object->name','$user_object->mobile','$user_object->email',password('$user_object->password'))";
+      $result = mysqli_query($this->conn,$sqli);
       if ($result) {
         return true;
       } else {      
         return false;
       }
     }
+
+    function findFriends($name){
+      $sqli = "SELECT Name,Mobile FROM register_user WHERE name like '$name%'";
+      $result = mysqli_query($this->conn,$sqli);
+       if ($result) {
+        return $result;
+      } else {      
+        return false;
+      }
+      
+    }
+
   }
 ?>
