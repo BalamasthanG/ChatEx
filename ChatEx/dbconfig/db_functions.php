@@ -20,7 +20,6 @@ class DB_Functions {
 
     //used to register the user
     function registerUser($user_object){
-      
       $sqli="INSERT INTO register_user(Name,Mobile,E_mail,Password) 
               VALUES('$user_object->name','$user_object->mobile','$user_object->email',password('$user_object->password'))";
       $result = mysqli_query($this->conn,$sqli);
@@ -39,7 +38,16 @@ class DB_Functions {
       } else {      
         return false;
       }
-      
+    }
+    
+    function showMember($mobile){
+      $sqli = "SELECT Name,Image FROM imagesdp WHERE Mobile  = $mobile";
+      $result = mysqli_query($this->conn,$sqli);
+       if ($result) {
+        return $result;
+      } else {      
+        return false;
+      }
     }
 
   }

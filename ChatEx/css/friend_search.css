@@ -1,0 +1,29 @@
+.overlay {
+    position: fixed;
+    display: none;
+    width: 95%;
+    height: 95%;
+    top: 16px;
+    left: 18px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.overlay_on{
+    display: block;
+}
+
+.overlay_off{
+    display: none;
+}
+
+#member_card_div{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top:55px;
+    left: 115px;
+}
