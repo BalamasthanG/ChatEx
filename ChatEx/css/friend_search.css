@@ -1,8 +1,8 @@
 .overlay {
     position: fixed;
     display: none;
-    width: 95%;
-    height: 95%;
+    width: 60%;
+    height: 60%;
     top: 16px;
     left: 18px;
     right: 0;
@@ -24,6 +24,22 @@
     position: absolute;
     height: 50%;
     width: 50%;
-    top:55px;
-    left: 115px;
+    top:165px;
+    left: 200px;
+}
+
+#added_list{
+    border: 1px groove;
+    width: 220px;
+    position: absolute;
+    left: 70%;
+    overflow: auto;
+}
+
+#whole_list{
+    border: 1px groove;
+    width: 220px;
+    position: absolute;
+    left: 40%;
+    overflow: auto;
 }

@@ -13,6 +13,8 @@ function callEvent(obj,id){
 					document.getElementById(id).classList.remove("overlay_off");
 				}
 				document.getElementById(id).classList.add("overlay_on");
+			}else if(id === 'reload'){
+				window.location.reload(true);
 			}
 			document.getElementById(id).innerHTML = this.responseText;
 		}
